@@ -1,33 +1,19 @@
+const express = require('express');
 const http = require('http');
 const url = require('url');
 const routes = require('./route/routeHandlers');
 
-const app = {};
+const PORT = 3000;
 
-app.config = {
-    port: 3000
-}
+const app = express();
 
-app.createServer = () => {
-    const server = http.createServer(app.hendleRoute);
-    server.listen(app.config.port,() => {
-        console.log(`Server running on port ${app.config.port}`);
-    });
-}
 
-app.hendleRoute = (req, res) => {
-
-    const persedUrl = url.parse(req.url, true);
-    const pathname = persedUrl.pathname;
-    const trimmedPathname = pathname.replace(/^\/|\/$/g, '');
-    const mothed = req.mothed.toLowerCase();
-    const qureyObject = persedUrl.query;
-
-    const controlRoutes = routes[trimmedPathname];
+app.use(routes)
 
 
 
-}
 
+app.listen(PORT, (req, res) => {
+    console.log(`Server running on port ${PORT}`);
+})
 
-app.createServer();

@@ -1,9 +1,22 @@
+const express = require('express');
 const apiController = require('../controller/apiController');
 
-const routes = {
+const routes = express.Router();
 
-    simple : apiController.simple
+routes.get('/', (req, res) => {
+    res.json({
+        status : 'success',
+        message: 'Welcome to the Quran API service'
+    });
+});
 
-}
 
-modules exports = routes;
+routes.get('/api/v1/surah', (req, res) => {
+    apiController.allSurah(req, res);
+});
+
+routes.get('/api/v1/surah/:id', (req, res) => {
+    apiController.singleSurah(req, res);
+});
+
+module.exports = routes;
