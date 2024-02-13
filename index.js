@@ -1,4 +1,6 @@
 const http = require('http');
+const url = require('url');
+const routes = require('./route/routeHandlers');
 
 const app = {};
 
@@ -14,8 +16,17 @@ app.createServer = () => {
 }
 
 app.hendleRoute = (req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Welcome to the server');
+
+    const persedUrl = url.parse(req.url, true);
+    const pathname = persedUrl.pathname;
+    const trimmedPathname = pathname.replace(/^\/|\/$/g, '');
+    const mothed = req.mothed.toLowerCase();
+    const qureyObject = persedUrl.query;
+
+    const controlRoutes = routes[trimmedPathname];
+
+
+
 }
 
 
