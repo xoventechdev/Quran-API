@@ -6,8 +6,8 @@ This project provides a RESTful API service for retrieving information about Qur
 
 
 
-Live Url : https://quran.netwix.xyz/api/v1/surah :  Retrieve information about all Surahs.
-Live Url : https://quran.netwix.xyz/api/v1/surah/1 :  Retrieve information about a specific Surah by its ID.
+#### Live Url : https://quran.netwix.xyz/api/v1/surah :  Retrieve information about all Surahs.
+#### Live Url : https://quran.netwix.xyz/api/v1/surah/1 :  Retrieve information about a specific Surah by its ID.
 
 
 ## Usage
