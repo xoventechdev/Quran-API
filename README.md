@@ -5,6 +5,11 @@ This project provides a RESTful API service for retrieving information about Qur
 ![Alt Text](screenshot.png)
 
 
+
+Live Url : https://quran.netwix.xyz/api/v1/surah :  Retrieve information about all Surahs.
+Live Url : https://quran.netwix.xyz/api/v1/surah/1 :  Retrieve information about a specific Surah by its ID.
+
+
 ## Usage
 
 ### Endpoints
@@ -41,8 +46,8 @@ The API responses are formatted in JSON and include the following fields:
 
 ## Dependencies
 
-- **Express:** [express](https://www.npmjs.com/package/express)
-- **MySql:** [multer](https://www.npmjs.com/package/mysql)
+- **Express:** [Express](https://www.npmjs.com/package/express)
+- **MySql:** [MySql](https://www.npmjs.com/package/mysql)
 
 ## Contributing
 
